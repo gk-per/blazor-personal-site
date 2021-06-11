@@ -1,0 +1,16 @@
+﻿@page "/info"
+
+<h1>Info</h1>
+
+<a class="main" href="/likes">An unabridged list of things I enjoy</a>
+
+@*<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>*@
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

@@ -1,0 +1,21 @@
+﻿@page "/likes"
+
+<h1>Likes</h1>
+
+<ul>
+    <li>Physics</li>
+    <li>Astronomy</li>
+    <li>Music</li>
+    <li>Leveraging Computers to Make My Life Easier/Better</li>
+    <li>Travel</li>
+</ul>
+
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
