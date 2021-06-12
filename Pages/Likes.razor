@@ -1,21 +1,54 @@
 ﻿@page "/likes"
 
 <h1>Likes</h1>
-
 <ul>
-    <li>Physics</li>
-    <li>Astronomy</li>
-    <li>Music</li>
-    <li>Leveraging Computers to Make My Life Easier/Better</li>
-    <li>Travel</li>
+    <li @onclick="() => Toggle(1)">Computers</li>
+    <li @onclick="() => Toggle(2)">Physics</li>
+    <li @onclick="() => Toggle(3)">Astronomy</li>
+    <li @onclick="() => Toggle(4)">Music</li>
+    <li @onclick="() => Toggle(5)">Travel</li>
 </ul>
+
+<br />
+<h1>@subject</h1>
+<div class="info-text">
+    <p style="font-size: 1.5rem;">@description</p>
+</div>
+
 
 
 @code {
-    private int currentCount = 0;
+    private string description = "";
+    private string subject = "";
 
-    private void IncrementCount()
+    private void Toggle(int selectionNumber)
     {
-        currentCount++;
+        switch (selectionNumber)
+        {
+            case 1:
+                description = "I can't remember a time when I didn't regularly use at least one computer. From being a little kid playing Minesweeper and Solitaire on my mother's work laptop, to growing up playing games and developing software to augment my gaming experience, to developing data analysis programs during my undergraduate research project, to now being a professional in the software world...to me, where I ended up almost makes perfect sense. I consider computers and the near-instantaneous communication of information that they enable (be it locally on the computer hardware flipping bits or many computers on a network) the most important invention in the history of mankind. Based on that consideration, and being born in an era where computer technologies are so rapidly evolving, I have feeling of near obligation to learn how to use computers to make life easier and better for everyone.";
+                subject = "COMPUTERS";
+                break;
+            case 2:
+                description = "In high school I was into pop science books and science olympiad. I took three years of physics taught by a great teacher who was very enthusiastic about physics and I decided to major in physics with a concentration in astronomy for my undergraduate degree. My high school physics teacher got his PhD from my alma mater, Louisiana State University, and (not by coincidence) his PhD advisor was my undergraduate research advisor. The lab work I did during my undergraduate research was titled 'Testing the Photon Detection System for Deep Underground Neutrino Experiment' and I enjoyed studying physics immensely. Ultimately my decision to not continue my physics education came down to how grueling I percieved graduate student life to be, especially with the significant potential for having to find work in the private sector after finishing a PhD anyway. ";
+                subject = "PHYSICS";
+                break;
+            case 3:
+                description = "Ever since I was a little kid, my father and I would go and watch meteor showers or eclipses as they came around and I was always interested in space and the nature of what lies beyond the planet we humans inhabit. I visited the LIGO Livingston Observatory on school field trips at least five or six times. So it was quite convenient, given how enthusiastic I was about physics, that one of the only ways to meaningfully understand astronomical phenomena is by studying them using the tools of physics. I'm here for all forms of astronomy; naked eye, telescopes from small to huge, radio astronomy, everything about the subject fascinates me. I will continue observing the sky and learning about space for the rest of my life.";
+                subject = "ASTRONOMY";
+                break;
+            case 4:
+                description = "My love of music is something I got from my parents. My first concert was Van Halen's reunion tour with David Lee Roth in 2007. I played trumpet and french horn all throughout grade school and high school, and I was especially into marching band in high school. It consumed pretty much every facet of my life that wasn't already covered by physics and computers. I love going to concerts and music festivals and listening to live music in general.";
+                subject = "MUSIC";
+                break;
+            case 5:
+                description = "Traveling is something I have only gotten into relatively recently. I started by traveling out of my home state of Louisiana to some other states for concerts during college. Then in 2019, I visited my friend who was studying abroad in Wales, and we also visited Scotland and England while I was there. In late 2019 and early 2020 I visited Nova Scotia, Canada to join my partner and explore Canada while they were finishing their graduate degree. Once the borders reopen and travel is permitted and safe, I intend to continue traveling and hopefully I'll be able to add some more countries to my list soon.";
+                subject = "TRAVEL";
+                break;
+            default:
+                description = "";
+                break;
+
+        }
     }
 }
