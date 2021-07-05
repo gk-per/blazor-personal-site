@@ -1,0 +1,26 @@
+﻿@page "/todo"
+
+<a class="main" style="position: absolute; left: 10px;" href="/info">back</a>
+<h1>To Do</h1>
+<ul>
+    <li><del>Visit the Jean Lafitte Nature Preserve</del></li>
+    <li><del>Visit England</del></li>
+    <li><del>Visit Scotland</del></li>
+    <li><del>Visit Wales</del></li>
+    <li>Visit France</li>
+    <li>Visit Italy</li>
+    <li>Own a home</li>
+</ul>
+
+<br />
+<h1>@subject</h1>
+<div class="info-text">
+    <p style="font-size: 1.5rem;">@description</p>
+</div>
+
+
+
+@code {
+    private string description = "";
+    private string subject = "";
+}

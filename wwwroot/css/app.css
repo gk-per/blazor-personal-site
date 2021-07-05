@@ -5,6 +5,14 @@ html, body {
     background-color: #1f1f1f;
 }
 
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+li {
+    font-size: large;
+}
 a, .btn-link {
     color: #0366d6;
 }
@@ -28,6 +36,7 @@ app {
 }
 
 .main, .main:hover {
+    font-size: large;
     flex: 1;
     text-align: center;
     color: azure;

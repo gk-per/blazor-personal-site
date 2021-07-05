@@ -1,6 +1,8 @@
 ﻿@page "/likes"
 
+<a class="main" style="position: absolute; left: 10px;" href="/info">back</a>
 <h1>Likes</h1>
+<h6>(click to read more about each topic and its relation to my life experience)</h6> <br>
 <ul>
     <li @onclick="() => Toggle(1)">Computers</li>
     <li @onclick="() => Toggle(2)">Physics</li>
@@ -10,9 +12,9 @@
 </ul>
 
 <br />
-<h1>@subject</h1>
+<h3>@subject</h3>
 <div class="info-text">
-    <p style="font-size: 1.5rem;">@description</p>
+    <p style="font-size: 1.25rem;">@description</p>
 </div>
 
 
