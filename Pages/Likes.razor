@@ -1,8 +1,9 @@
 ﻿@page "/likes"
-
-<a class="main" style="position: absolute; left: 10px;" href="/info">back</a>
+<div id="welcome">
+<a style="position: absolute; left: 50px;" href="/info">back</a>
 <h1>Likes</h1>
-<h6>(click to read more about each topic and its relation to my life experience)</h6> <br>
+<h6>(click each topic name to read more about each topic and its relation to my life experience)</h6> <br>
+
 <ul>
     <li @onclick="() => Toggle(1)">Computers</li>
     <li @onclick="() => Toggle(2)">Physics</li>
@@ -12,10 +13,13 @@
 </ul>
 
 <br />
-<h3>@subject</h3>
-<div class="info-text">
-    <p style="font-size: 1.25rem;">@description</p>
+
+    <h3>@subject</h3>
+    <div class="info-text">
+        <p style="font-size: 1.25rem;">@description</p>
+    </div>
 </div>
+
 
 
 
@@ -44,7 +48,7 @@
                 subject = "MUSIC";
                 break;
             case 5:
-                description = "Traveling is something I have only gotten into relatively recently. I started by traveling out of my home state of Louisiana to some other states for concerts during college. Then in 2019, I visited my friend who was studying abroad in Wales, and we also visited Scotland and England while I was there. In late 2019 and early 2020 I visited Nova Scotia, Canada to join my partner and explore Canada while they were finishing their graduate degree. Once the borders reopen and travel is permitted and safe, I intend to continue traveling and hopefully I'll be able to add some more countries to my list soon.";
+                description = "Traveling is something I have only gotten into relatively recently. I started by traveling out of my home state of Louisiana to some other states for concerts during college. Then in 2019, I visited my friend who was studying abroad in Wales, and we also visited Scotland and England while I was there. In late 2019 and early 2020 I visited Nova Scotia, Canada. Once the borders reopen and travel is permitted and safe, I intend to continue traveling and hopefully I'll be able to add some more countries to my list soon.";
                 subject = "TRAVEL";
                 break;
             default:

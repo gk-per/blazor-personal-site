@@ -1,8 +1,9 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: monospace;
-    background-color: #1f1f1f;
+    font: 100%/1.45 'georgia',serif;
+    background: url("https://res.cloudinary.com/stansbury/image/upload/v1625682431/IMG-1503_cg2jpb.jpg") no-repeat 50% fixed;
+    background-size: cover;
 }
 
 ul {
@@ -39,8 +40,7 @@ app {
     font-size: large;
     flex: 1;
     text-align: center;
-    color: azure;
-    text-decoration: none;
+    color: black;
 }
 
     .main .top-row {
@@ -72,6 +72,74 @@ app {
 
 .validation-message {
     color: red;
+}
+
+#welcome #info-list {
+    max-width: 620px;
+    margin: auto;
+}
+
+#welcome {
+    padding: 20px;
+    background: hsla(0,0%,100%,.7);
+}
+
+#masthead {
+    background: url("https://res.cloudinary.com/stansbury/image/upload/v1625682431/IMG-1503_cg2jpb.jpg") no-repeat 50% fixed;
+    background-size: cover;
+    font-size: 21px;
+    line-height: 1.52;
+    height: 5rem;
+    padding: 25px 0;
+}
+
+#masthead #wrapper {
+    max-width: 620px;
+    margin: auto;
+}
+
+#masthead #wrapper #welcome h1 {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.45rem;
+    color: black;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h3 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.45rem;
+    color: inherit;
+    font-family: -apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 1.31951rem;
+    line-height: 1.1;
 }
 
 #blazor-error-ui {
